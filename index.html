@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer></script>
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__logo">> Todolist</h1>
+        <nav>
+            <img src="images/add_white_24dp.svg" alt="" id="open-form" class="header__button">
+        </nav>
+    </header>
+    
+    <main>
+        <aside class="side-bar">
+            <div id="inbox" class="side-bar__item">
+                <img src="images/inbox_black_24dp.svg" alt="">
+                <span>Inbox</span>
+            </div>
+            <div id="today" class="side-bar__item">
+                <img src="images/today_black_24dp.svg" alt="">
+                <span>Today</span>
+            </div>
+            <div id="week" class="side-bar__item">
+                <img src="images/date_range_black_24dp.svg" alt="">
+                <span>Next 7 days</span>
+            </div>
+            <div id="projects" class="side-bar__item side-bar__item--column">
+                <div>Projects</div>
+                <div id="projects-list" class="side-bar__list-container"></div>
+            </div>
+        </aside>
+
+        <div id="container">
+            <div id="todolist" class="todolist">
+
+            </div>
+
+            <div id="new-item" class="form form--minimised">
+                <img src="images/radio_button_unchecked_black_48dp.svg" alt="" class="form__checkbox">
+                <input type="text" id="new-title" class="form__input form__input--title" cell="title" placeholder="Task">
+                <input type="text" id="new-description" class="form__input form__input--description" placeholder="description">
+                <input type="date" id="new-due-date" class="form__input form__input--due-date">
+                <select name="priorities" id="new-priority" class="form__input form__input--priority">
+                    <option value="0" selected>Priority (optional)</option>
+                    <option value="4">Urgent and Important</option>
+                    <option value="3">Urgent but Not Important</option>
+                    <option value="2">Not Urgent but Important</option>
+                    <option value="1">Not Urgent and Not Imporant</option>
+                </select>
+                <select name="projects" id="new-project" class="form__input form__input--project">
+                    <option value="//not a project//" selected>Project (optional)</option>
+                </select>
+                <button id="add-item" class="form__button form__button--add">
+                    <img src="images/add_circle_outline_black_24dp.svg" alt="" class="form__img">
+                </button>
+                <button id="delete-item" class="form__button form__button--delete">
+                    <img src="images/delete_forever_black_24dp.svg" alt="" class="form__img">
+                </button>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

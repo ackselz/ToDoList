@@ -1,0 +1,221 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: white;
+    --main-font-color: black;
+    --alternate-font-color: white;
+    --secondary-font-color: gray;
+    --main-accent-color: #3ECF96;
+    --secondary-accent-color: #eff2f3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+
+    background-color: var(--secondary-accent-color);
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+
+    padding: 0 3em;
+
+    background-color: var(--main-accent-color);
+}
+
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 2em;
+
+    padding: 0 3em;
+
+}
+
+#side-bar {
+    padding-top: 3em;
+}
+
+.side-bar__item {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+
+    padding-bottom: 1.5em;
+
+    font-weight: bold;
+}
+
+#projects {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#projects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+#content {
+    height: 100%;
+
+    padding: 3em 3em;
+
+    background-color: var(--main-bg-color);
+}
+
+h1 {
+    padding: 0.25em 0.5em;
+
+    color: var(--alternate-font-color);
+}
+
+.cell {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+        "checkbox title ."
+        ". description .";
+
+    padding: 0.5em 0;
+    margin-bottom: 1em;
+    border-bottom: 2px solid var(--secondary-accent-color);
+    
+    background-color: inherit;
+}
+
+.checkbox {
+    height: 1.75em;
+    width: 1.75em;
+
+    grid-area: checkbox;
+    align-self: center;
+
+    margin: 0 1em;
+}
+
+.title {
+    grid-area: title;
+
+    margin: 0.25em 0;
+
+    font-size: 1.3em;
+}
+
+.description {
+    grid-area: description;
+}
+
+/* .UrgentImportant {
+    background-color: tomato;
+} */
+
+/* #new-item {
+    display: none;
+} */
+
+.date-container h2{
+    padding-bottom: 0.25em;
+}
+
+.maximised {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+        "checkbox newtitle additem"
+        ". newdescription additem"
+        ". newduedate ."
+        ". newpriority deleteitem"
+        ". newproject deleteitem";
+
+    padding: 0.5em 0;
+    margin-bottom: 1em;
+    border-bottom: 2px solid var(--secondary-accent-color);
+    
+    background-color: inherit;
+}
+
+
+.minimised {
+    display: none;
+}
+
+#new-title {
+
+    grid-area: newtitle;
+
+    margin: 0.25em 0;
+
+    border: none;
+    border-bottom: 1px solid gray;
+
+    font-size: 1.3em;
+}
+
+#new-description {
+
+
+    grid-area: newdescription;
+
+    border: none;
+    border-bottom: 1px solid gray;
+
+    margin: 0.25em 0;
+}
+
+#new-due-date {
+
+
+    width: max-content;
+
+    grid-area: newduedate;
+
+    margin: 0.25em 0;
+}
+
+#new-priority {
+
+
+    width: max-content;
+
+    grid-area: newpriority;
+
+    margin: 0.25em 0;
+}
+
+#new-project {
+
+
+    width: max-content;
+
+    grid-area: newproject;
+
+    margin: 0.25em 0;
+}
+
+#add-item {
+    grid-area: additem;
+    margin: 0  0 0 1em;
+
+    background-color: var(--main-accent-color);
+}
+
+#delete-item {
+    grid-area: deleteitem;
+    margin: 0  0 0 1em;
+}

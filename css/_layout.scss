@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+
+    background-color: var(--alternate-bg-color);
+}
+
+main {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 2em;
+
+    padding: 0 3em;
+}
+
+#container {
+    height: 100%;
+
+    padding: 3em 3em;
+
+    background-color: var(--main-bg-color);
+}

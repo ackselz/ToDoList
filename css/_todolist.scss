@@ -1,0 +1,75 @@
+.cell {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+        "checkbox title ."
+        ". description .";
+
+    margin-bottom: 1em;
+    padding: 0.5em 0;
+    border-bottom: 0.25em solid var(--alternate-bg-color);
+
+    &__checkbox {
+        height: 1.75em;
+        width: 1.75em;
+    
+        grid-area: checkbox;
+        align-self: center;
+    
+        margin: 0 1em;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    &__title {
+        grid-area: title;
+    
+        margin: 0.25em 0;
+    
+        font-size: 1.3em;
+    }
+    
+    &__description {
+        grid-area: description;
+    }
+
+}
+
+.UrgentImportant {
+    background-color: rgba(206, 51, 51, 0.712);
+}
+.UrgentNotImportant {
+    background-color: rgba(207, 108, 27, 0.712);
+}
+.NotUrgentImportant {
+    background-color: rgba(223, 206, 53, 0.781);
+}
+
+.todolist {
+
+    &__period {
+        margin-bottom: 2em;
+        padding: 0.75em;
+        border-radius: 0.5em;
+
+        &--red-outline {
+            border: 0.125em solid var(--main-contrast-color);
+        }
+
+        &--green-outline {
+            border: 0.125em solid var(--main-accent-color);
+        }
+    }
+
+    &__period-label {
+        margin: 0.5em 0;
+
+        font-size: 1.75em;
+        text-decoration: underline;
+    }
+}
+
+
+
