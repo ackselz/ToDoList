@@ -1,0 +1,107 @@
+.form {
+    &--maximised {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas: 
+            "checkbox newtitle newtitle newtitle"
+            ". newdescription newdescription newdescription"
+            ". newduedate additem deleteitem"
+            ". newpriority additem deleteitem"
+            ". newproject additem deleteitem";
+    
+        margin-bottom: 1em;
+        padding: 0.5em 0;
+        border-bottom: 2px solid var(--secondary-accent-color);
+    }
+    
+    
+    &--minimised {
+        display: none;
+    }
+
+    &__checkbox {
+        height: 1.75em;
+        width: 1.75em;
+    
+        grid-area: checkbox;
+        align-self: center;
+    
+        margin: 0 1em;
+    }
+
+    &__input {
+
+        border: none;
+        margin: 0.5em 0;
+
+        &--title {
+            grid-area: newtitle;
+
+            border-bottom: 1px solid gray;
+        
+            font-size: 1.3em;
+        }
+        
+        &--description {
+            grid-area: newdescription;
+        
+            border-bottom: 1px solid gray;
+        }
+        
+        &--due-date {
+            width: max-content;
+        
+            grid-area: newduedate;
+        }
+        
+        &--priority {
+            width: max-content;
+        
+            grid-area: newpriority;
+        }
+        
+        &--project {
+            width: max-content;
+        
+            grid-area: newproject;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0 0.25em;
+        padding: 1em;
+
+        background-color: transparent;
+
+        &--add {
+            grid-area: additem;
+            
+            &:hover {
+                border-radius: 0.25em;
+
+                background-color: var(--main-accent-color);
+                cursor: pointer;
+            }
+        }
+        
+        &--delete {
+            grid-area: deleteitem;
+
+            &:hover {
+                border-radius: 0.25em;
+
+                background-color: var(--main-contrast-color);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__img {
+        height: 2em;
+        width: 2em;
+    }
+}

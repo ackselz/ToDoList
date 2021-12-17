@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+
+    padding: 0 3em;
+
+    background-color: var(--main-accent-color);
+
+    &__logo {
+        padding: 0.25em 0;
+
+        color: var(--main-bg-color);
+    }
+
+    &__button {
+        height: 2em;
+        width: 2em;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
